@@ -2,7 +2,7 @@ name: Publicacion Automatica
 on:
   push:
     tags:
-      - 'v*' # Se activa cuando creas una versión como v1.0
+      - "v*"
 jobs:
   build:
     name: Compilando para Android y Windows
@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          channel: "stable"
       - name: Build Android
         run: flutter build apk --release
       - name: Build Windows
